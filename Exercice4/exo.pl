@@ -16,4 +16,4 @@ sub tableMult{
 	}
 }
 
-tableMult($param or 2);
+tableMult($param or 2); #renvoi la premiere valeur qui n'est pas fausse
