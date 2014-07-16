@@ -57,8 +57,8 @@ Vérifier qu'une clé existe :
 Trier une table de hash par les clés : IMPOSSIBLE , uniquement à l'affichage
 	foreach my $keys (sort keys %hashtable){ ... }
 	
-
-
+Ajouter un objet dans un une table de hash
+	$hash{$key} = $value;
 
 --------------------------------------------
 Gestion des paramèters du programme
