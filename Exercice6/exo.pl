@@ -34,7 +34,7 @@ foreach my $month (sort keys %jours){
 
 print "\n";
 
-# Tri par ordre alphabétique de la valeurt 
+# Tri par ordre alphabétique de la valeur 
 foreach my $month (sort { $jours{$a} <=> $jours{$b} }  keys %jours){
      print $jours{$month}."\t".$month;
      print "\n";
