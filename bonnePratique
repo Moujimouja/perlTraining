@@ -66,4 +66,13 @@ Récupérer les arguments passer en param
 
 my @param = @ARGV;
 
+--------------------------------------------
+Fonction de traitement
+--------------------------------------------
+
+grep .. 
+
+sort ..
+
+map ..
 
