@@ -11,7 +11,7 @@ print (join(',',@t)."\n");
 @t = (-0,-1,@t);
 $t[2] = 9;
 
-@t = sort {-$a <=> -$b} grep {$_ > 0} map{$_ * 2} @t;
+@t = sort {$b <=> $a} grep {$_ > 0} map{$_ * 2} @t;
 
 print (join(',',@t)."\n");
 
