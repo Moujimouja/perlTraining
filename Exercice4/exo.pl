@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-my $param = 4; #@ARGV[1];
+my $param = $ARGV[0];
 
 sub tableMult{
 	my ($n) = @_;
