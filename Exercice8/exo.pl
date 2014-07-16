@@ -41,6 +41,5 @@ foreach my $login (sort {$uid{$a} <=> $uid{$b} or $a cmp $b} keys %uid){
         print "\n";
 }
 
-
 close($fd);
 
