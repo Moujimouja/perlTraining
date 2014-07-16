@@ -11,18 +11,36 @@ my $ligne;
 
 while(defined($ligne = <$fd>)){
 	my ($login, undef, $uid) = split(/:/,$ligne);
-	#@loginUid = (@loginUid,$login,$uid);
 	$uid{$login} = $uid;	
 }
 
-#%uid = @loginUid;
 
-print  "\n UID HASH \n";
 
+# Trier dans l'ordre alphabétique des logins
 foreach my $login (sort keys %uid){
 	print $login."\t".$uid{$login};
         print "\n";
 }
+
+print "\n\n\n";
+
+#$a $uid{$a}
+#$b $uid{$b}
+#$login $uid{login}
+## Trier dans l'ordre croissant des UID 
+foreach my $login (sort {$uid{$a} <=> $uid{$b}} keys %uid){
+        print $login."\t".$uid{$login};
+        print "\n";
+}
+
+print "\n\n\n";
+
+#Comment affiner ce tri par ordre alpha des logins
+foreach my $login (sort {$uid{$a} <=> $uid{$b} or $a cmp $b} keys %uid){
+        print $login."\t".$uid{$login};
+        print "\n";
+}
+
 
 close($fd);
 
