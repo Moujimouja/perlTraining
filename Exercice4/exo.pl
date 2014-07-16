@@ -16,4 +16,4 @@ sub tableMult{
 	}
 }
 
-tableMult($param);
+tableMult($param or 2);
