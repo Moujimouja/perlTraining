@@ -14,3 +14,6 @@ Exercice 5 : For Each + Tableau + fonction sort, map et grep
 Exercice 6 : Tableau de hash , affichage et manipulation
 
 Exercice 7 : Lister ficheir / manipuler les tableaux
+
+
+kjc kl
