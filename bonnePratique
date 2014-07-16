@@ -1,7 +1,10 @@
 BONNES PRATIQUES
 _____________________________________________
 
-Pour les foreach, il faut utiliser une variable pour la lisibilité :
+Pour les foreach
+--------------------------------------------_
+
+Il faut utiliser une variable pour la lisibilité :
 
 foreach my $xxx (@t){
 	$xxx
@@ -12,4 +15,17 @@ Pas bien :
 foreach (@t){
         $_
 }
-_____________________________________________
+____________________________________________
+
+Pour les Fonctions
+
+--------------------------------------------
+
+Il faut mieux utiliser my ($a,$b,$c) = @_ plutot que 
+
+$x = shift ou $_[0]
+
+sub toto{
+my ($a,$b,$c) = @_ ;
+}
+
