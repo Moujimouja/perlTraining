@@ -61,10 +61,14 @@ Trier une table de hash par les clés : IMPOSSIBLE , uniquement à l'affichage
 
 
 --------------------------------------------
-Récupérer les arguments passer en param
+Gestion des paramèters du programme
 --------------------------------------------
 
-my @param = @ARGV;
+my @param = @ARGV :  Parametre passé au programme
+
+<ARGV> OU <>  : contient descripteur vers fichier en paramèter ou entrée standard
+
+$ARGV : contient fichier en cours de traitement par <>
 
 --------------------------------------------
 Fonction de traitement
