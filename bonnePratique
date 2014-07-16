@@ -1,6 +1,6 @@
 BONNES PRATIQUES
-_____________________________________________
 
+--------------------------------------------
 Pour les foreach
 --------------------------------------------_
 
@@ -15,10 +15,9 @@ Pas bien :
 foreach (@t){
         $_
 }
-____________________________________________
 
+--------------------------------------------
 Pour les Fonctions
-
 --------------------------------------------
 
 Il faut mieux utiliser my ($a,$b,$c) = @_ plutot que 
@@ -28,4 +27,43 @@ $x = shift ou $_[0]
 sub toto{
 my ($a,$b,$c) = @_ ;
 }
+
+
+
+--------------------------------------------
+Pour les tables de hash
+--------------------------------------------
+Pour supprimer une valeur :
+
+	On utilise delete() pour supprimer entrée dans table de hash
+	--> On n'utilise pas $hash{key} = undef
+
+		delete($hash{$key})
+
+Afficher une valeur dans une table de hash :
+	$hash{$key}
+
+Parcourir une table :
+
+	foreach my $e (keys %h) {...}
+
+Assigner un tableau à une hashtable :
+
+	%h = @t << Possible . Attention : clé, valeur, clé, valeur etc...
+
+Vérifier qu'une clé existe :
+	if(exists($hash{$key})) { ... } 
+
+Trier une table de hash par les clés : IMPOSSIBLE , uniquement à l'affichage
+	foreach my $keys (sort keys %hashtable){ ... }
+	
+
+
+
+--------------------------------------------
+Récupérer les arguments passer en param
+--------------------------------------------
+
+my @param = @ARGV;
+
 
