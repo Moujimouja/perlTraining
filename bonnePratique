@@ -1,0 +1,15 @@
+BONNES PRATIQUES
+_____________________________________________
+
+Pour les foreach, il faut utiliser une variable pour la lisibilité :
+
+foreach my $xxx (@t){
+	$xxx
+}
+
+Pas bien :
+
+foreach (@t){
+        $_
+}
+_____________________________________________
