@@ -91,6 +91,16 @@ Important : Glouton / Non glouton ! Rajouter un "?" après le quantificateur. Ex
 
 \bFred\b  match que Fred, pas alFred ni Frederic
 
+-------------------------------------------
+Référence
+-------------------------------------------
+
+Accéder au contenu d'un scalaire via référence : $$refscalar
+	$scalar = $$refScalar
+Accéder au contenu d'un tableau via référence : $refTab->[1]
+	@tab = @$refTable 
+Accéder au contenu d'une hashtable via référence : $refHashtable->{key}
+	%hasTable = %$refHashtable
 
 
 
