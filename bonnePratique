@@ -130,6 +130,10 @@ HashTab contenant tableau :
 
 /!\ Tableau / Scalaire / Hash = désalloué uniquement lorsqu'il n'y a plus aucune référence qui pointe dessus. /!\
 	
+Autovivification à partir d'une référence :
+	my $r1;
+	$r1->{$key} = xxx;
+
 
 	
 	
