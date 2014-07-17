@@ -57,6 +57,9 @@ Vérifier qu'une clé existe :
 Trier une table de hash par les clés : IMPOSSIBLE , uniquement à l'affichage
 	foreach my $keys (sort keys %hashtable){ ... }
 	
+Trier une table de hash sur les valeurs :
+	foreach my $month (sort { $jours{$a} <=> $jours{$b} }  keys %jours){
+	
 Ajouter un objet dans un une table de hash
 	$hash{$key} = $value;
 
