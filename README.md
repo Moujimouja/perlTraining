@@ -16,3 +16,5 @@ Exercice 6 : Tableau de hash , affichage et manipulation
 Exercice 7 : Lister ficheir / manipuler les tableaux
 
 Exercice 8 : Récupérer contenu d'un fichier dans une table de hash + tri / filtre
+
+Exercice 9 : Utilisation des regexp + lecture d'un fichier
