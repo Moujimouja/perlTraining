@@ -71,11 +71,11 @@ my @param = @ARGV :  Parametre passé au programme
 
 <ARGV> OU <>  : contient descripteur vers fichier en paramèter ou entrée standard
 
-$ARGV : contient fichier en cours de traitement par <>
+ARGV : contient fichier en cours de traitement par <>
 
---------------------------------------------
-Fonction de traitement
---------------------------------------------
+------------------------------------------------
+Fonction de traitement sur les tableau / liste
+------------------------------------------------
 
 grep .. 
 
@@ -96,12 +96,42 @@ Référence
 -------------------------------------------
 
 Accéder au contenu d'un scalaire via référence : $$refscalar
-	$scalar = $$refScalar
-Accéder au contenu d'un tableau via référence : $refTab->[1]
-	@tab = @$refTable 
-Accéder au contenu d'une hashtable via référence : $refHashtable->{key}
-	%hasTable = %$refHashtable
+	Prise de référence:	$refScalar = \$scalar
+	Copie de scalar:	$scalar = $$refScalar
 
+Accéder au contenu d'un tableau via référence : $refTab->[1]
+	Prise de référence :	$refTable = \@table
+	Copie de table : 	@tab = @$refTable 
+
+Accéder au contenu d'une hashtable via référence : $refHashtable->{key}
+	Prise de référence:  	$refHashTable = \%hasTable	
+	Copie de hashTable :	%hasHashTable = %$refHashtable
+
+
+Tableau multidimension :
+
+	Nouveau tableau multidimensionel anonyme : $refTab = [1,2,[3,4,5]];
+	Afficher contenu d'un tab de tab: print $refTab->[2]->[0]  donne "3"
+	Récupérer le tab contenu dans un tab : @{refTab->[2]}
+
+Hashtable multidimension :
+	Nouvelle hashtable anonyme : $refHash = { Paul => 28, Julie => 20}
+	Hastable multidimension anonyme : 
+		$refHash { Paul => 28, A => {toto => 1, titi=>2 }}
+	
+	Acces au contenu du hashtable plus bas : 
+		$refHash->{A}->{toto}  (print donne 1)
+	Récupérer le hashTable contenu %{$refHash->A}
+
+HashTab contenant tableau :
+	$refHash -> {A} -> [1]
+
+
+/!\ Tableau / Scalaire / Hash = désalloué uniquement lorsqu'il n'y a plus aucune référence qui pointe dessus. /!\
+	
+
+	
+	
 
 
 
