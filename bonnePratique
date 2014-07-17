@@ -80,3 +80,17 @@ sort ..
 
 map ..
 
+--------------------------------------------
+Expression régulière
+--------------------------------------------
+
+Important : Glouton / Non glouton ! Rajouter un "?" après le quantificateur. Ex : *? à la place de * >> .*?
+
+\bFred\b  match que Fred, pas alFred ni Frederic
+
+
+
+
+
+
+
