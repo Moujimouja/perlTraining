@@ -112,7 +112,8 @@ Tableau multidimension :
 
 	Nouveau tableau multidimensionel anonyme : $refTab = [1,2,[3,4,5]];
 	Afficher contenu d'un tab de tab: print $refTab->[2]->[0]  donne "3"
-	Récupérer le tab contenu dans un tab : @{refTab->[2]}
+	Récupérer le tab contenu dans un tab (pour pouvoir faire un foreach par exemple :
+		 @{refTab->[2]}
 
 Hashtable multidimension :
 	Nouvelle hashtable anonyme : $refHash = { Paul => 28, Julie => 20}
