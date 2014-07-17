@@ -15,4 +15,9 @@ Exercice 6 : Tableau de hash , affichage et manipulation
 
 Exercice 7 : Lister ficheir / manipuler les tableaux
 
+<<<<<<< HEAD
 Exercice 8 : Récupérer contenu d'un fichier dans une table de hash + tri / filtre
+=======
+
+kjc kl
+>>>>>>> ff1b839db0ef9da94fd432cdd3e42e75d7a13b48
