@@ -4,6 +4,21 @@ use strict;
 use warnings;
 use Data::Dumper;
 
+sub display{
+	my ($refLogin) = @_;
+	my $login;
+	foreach $login (keys %$refLogin){
+	print $login."\t ". $refLogin->{$login}->{passwd}.
+	"\t".$refLogin->{$login}->{uid}.
+	"\t".$refLogin->{$login}->{passwd}.
+	"\t".$refLogin->{$login}->{gid}.
+	"\t". $refLogin->{$login}->{data}->[0].
+	"\t".$refLogin->{$login}->{data}->[1].
+	"\t".$refLogin->{$login}->{data}->[2]."\n";
+	}
+}
+
+
 sub parse {
 	my ($file) = @_;
 	my $refLoginHash;
@@ -49,6 +64,9 @@ sub parse {
 
 my $refLoginHash = parse('passwd');
 
-print Dumper($refLoginHash);
+# Question X : Afficher à l'aide du Dumper :
+#print Dumper($refLoginHash);
+
+display($refLoginHash);
 
 
