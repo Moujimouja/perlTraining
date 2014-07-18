@@ -1,5 +1,13 @@
 #MonModule.pm
+
+
 package MonModule;
+
+use strict;
+use warnings;
+
+use parent  qw(Exporter);
+our @EXPORT = qw(&display &parse);
 
 sub display{
         my ($refLogin) = @_;

@@ -4,8 +4,7 @@ use strict;
 use warnings;
 use MonModule;
 
-
-my $refLoginHash = MonModule::parse('passwd');
+my $refLoginHash = parse('passwd');
 
 foreach my $login (keys %$refLoginHash){
 	$refLoginHash->{$login}->{gid}*=2;	
@@ -14,4 +13,4 @@ foreach my $login (keys %$refLoginHash){
 # Question X : Afficher à l'aide du Dumper :
 #print Dumper($refLoginHash);
 
-MonModule::display($refLoginHash);
+display($refLoginHash);
