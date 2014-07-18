@@ -18,3 +18,7 @@ Exercice 7 : Lister ficheir / manipuler les tableaux
 Exercice 8 : Récupérer contenu d'un fichier dans une table de hash + tri / filtre
 
 Exercice 9 : Utilisation des regexp + lecture d'un fichier
+
+Exercice 10 : Analyse de fichier de log avec insertion dans tableau de hash + tri / filtre / top X etc...
+
+Exercice 11 : Création de hash tableau multiniveau a partir d'un fichier
