@@ -7,14 +7,19 @@ use Data::Dumper;
 sub display{
 	my ($refLogin) = @_;
 	my $login;
-	foreach $login (keys %$refLogin){
-	print $login."\t ". $refLogin->{$login}->{passwd}.
-	"\t".$refLogin->{$login}->{uid}.
-	"\t".$refLogin->{$login}->{passwd}.
-	"\t".$refLogin->{$login}->{gid}.
-	"\t". $refLogin->{$login}->{data}->[0].
-	"\t".$refLogin->{$login}->{data}->[1].
-	"\t".$refLogin->{$login}->{data}->[2]."\n";
+	foreach $login (sort{$refLogin->{$b}->{uid} <=> $refLogin->{$a}->{uid} or $a cmp $b }  keys %$refLogin){
+		print $login."\t ".$refLogin->{$login}->{uid}."\t".$refLogin->{$login}->{gid}."\t";
+		# "\t". $refLogin->{$login}->{data}->[0].
+		#"\t".$refLogin->{$login}->{data}->[1].
+		#"\t".$refLogin->{$login}->{data}->[2]."\n";
+		print join(", ",@{$refLogin->{$login}->{data}});	
+		#print "\n\t".join("\n \t",@{$refLogin->{$login}->{data}});
+		print "\n";
+	
+		# Autre solution pour le tableau :
+		# foreach my $date(@{$refLogin->{$login}->{data}){
+		# print $data;
+		# }
 	}
 }
 
@@ -64,9 +69,11 @@ sub parse {
 
 my $refLoginHash = parse('passwd');
 
+foreach my $login (keys %$refLoginHash){
+	$refLoginHash->{$login}->{gid}*=2;	
+}
+
 # Question X : Afficher à l'aide du Dumper :
 #print Dumper($refLoginHash);
 
 display($refLoginHash);
-
-
