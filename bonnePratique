@@ -135,7 +135,32 @@ Autovivification à partir d'une référence :
 	$r1->{$key} = xxx;
 
 
-	
+
+-------------------------------------------
+Objet 
+-------------------------------------------
+
+Création classe :
+
+sub new{
+	($classe, $param1, $param2) = @_
+	my $this = {}
+	$this->{attribut} = $param1;
+	...	
+
+	return bless($this, $classe);
+}
+
+
+[...]
+
+ 1;
+
+Connaître le type d'un objet : ref($objet);	
+Déclaration : my $objet = MaClasse -> new(param1, param2...)
+
+
+
 	
 
 
