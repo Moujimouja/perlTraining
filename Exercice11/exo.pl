@@ -15,10 +15,25 @@ sub parse {
 		my $refLoginParam = {};
 		chomp($ligne);
 		my ($login, $passwd, $uid, $gid, $info, $home, $shell) = split(/:/,$ligne);
-		print $ligne;
 		$refLoginParam->{passwd} = $passwd;
 		$refLoginParam->{uid} = $uid;
 		$refLoginParam->{gid} = $gid;
+		# Autre solution :
+		# refLoginHash -> {$login} -> {passwd} = $password;
+		# refLoginHash -> {$login} -> {uid} = $uid; 
+		# refLoginHash -> {$login} -> {gid} = $gid;
+		# refLoginHash -> {$login} -> {data} -> [0] = $info;
+		# refLoginHash -> {$login} -> {data} -> [1] = $home;
+		# refLoginHash -> {$login} -> {data} -> [2] = $shell;
+		
+		# Autre solution bis: 
+		# $refLoginHash -> {$login} = {
+		# 			passwd => $passwd,
+		# 			uid => $uid,
+		# 			gid => $gid,
+		# 			data => [$info, $home,$shell]
+		#			}
+		
 		
 		$data[0] = $info;
 		$data[1] = $home;
