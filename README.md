@@ -13,7 +13,7 @@ Exercice 5 : For Each + Tableau + fonction sort, map et grep
 
 Exercice 6 : Tableau de hash , affichage et manipulation
 
-Exercice 7 : Lister ficheir / manipuler les tableaux
+Exercice 7 : lister fichiers / manipuler les tableaux
 
 Exercice 8 : Récupérer contenu d'un fichier dans une table de hash + tri / filtre
 
